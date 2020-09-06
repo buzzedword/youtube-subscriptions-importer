@@ -17,9 +17,9 @@ function initClient() {
     // Get API key and client ID from API Console.
     // 'scope' field specifies space-delimited list of access scopes.
     gapi.client.init({
-        'apiKey': 'AIzaSyB4iNfzGiZJaorOM6KFACWX3T2q0AlExPU',
+        'apiKey': 'AIzaSyA2D8Mr_PUP0ifaHGgAazjtXdBwH5nBBmo',
         'discoveryDocs': [discoveryUrl],
-        'clientId': '1041512274445-upcpmoa8f37d5eping3t3cm7gl79ic9p.apps.googleusercontent.com',
+        'clientId': '142779652697-sqvn1m1cukli2kajjm9340fv6r9i8sfo.apps.googleusercontent.com',
         'scope': SCOPE
     }).then(function() {
         GoogleAuth = gapi.auth2.getAuthInstance();
@@ -30,16 +30,6 @@ function initClient() {
         // Handle initial sign-in state. (Determine if user is already signed in.)
         var user = GoogleAuth.currentUser.get();
         setSigninStatus();
-
-        // Call handleAuthClick function when user clicks on
-        //      "Sign In/Authorize" button.
-        /*$('#sign-in-or-out-button').click(function() {
-            handleAuthClick();
-        });
-        $('#revoke-access-button').click(function() {
-            revokeAccess();
-            console.log("pressed button");
-        });*/
         $('#revoke-access-button').click(function() {
             revokeAccess();
             console.log("pressed button");
